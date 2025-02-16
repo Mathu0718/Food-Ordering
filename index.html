@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Food Ordering</h1>
+        <div class="cart" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="shops">
+        <h2>Select a Shop</h2>
+        <div class="shop-list">
+            <div class="shop" data-shop="McDonald's">
+                <img src="photos/mc.png" alt="McDonald's">
+                <button class="shop-btn">McDonald's</button>
+            </div>
+            <div class="shop" data-shop="Domino's">
+                <img src="photos/domino.png" alt="Domino's">
+                <button class="shop-btn">Domino's</button>
+            </div>
+            <div class="shop" data-shop="KFC">
+                <img src="photos/download.png" alt="KFC">
+                <button class="shop-btn">KFC</button>
+            </div>
+            <div class="shop" data-shop="Starbucks">
+                <img src="photos/starbucks.jpeg" alt="Starbucks">
+                <button class="shop-btn">Starbucks</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu">
+        <h2 id="menu-heading">Menu</h2>
+        <div id="food-items" class="food-container">
+            <!-- Food items will be dynamically added here -->
+        </div>
+    </section>
+
+    <section class="cart-section" id="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="total-price">0</span></p>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
